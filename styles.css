@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 2em;
+    border: none;
+    text-align: right;
+    background-color: #333;
+    color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button:active {
+    background-color: #d0d0d0;
+}
+
+button:nth-child(4n+1) {
+    background-color: #ff6666; /* Red for clear button */
+    color: #fff;
+}
+
+button:nth-child(4n+2),
+button:nth-child(4n+3),
+button:nth-child(4n+4) {
+    background-color: #66b3ff; /* Blue for operators */
+    color: #fff;
+}
+
+button:nth-child(4n+2):hover,
+button:nth-child(4n+3):hover,
+button:nth-child(4n+4):hover {
+    background-color: #3399ff; /* Darker blue on hover */
+}
+
+button:nth-last-child(3),
+button:nth-last-child(2),
+button:nth-last-child(1) {
+    background-color: #66ff66; /* Green for equals and other buttons */
+    color: #fff;
+}
+
+button:nth-last-child(3):hover,
+button:nth-last-child(2):hover,
+button:nth-last-child(1):hover {
+    background-color: #33cc33; /* Darker green on hover */
+}
